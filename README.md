@@ -17,7 +17,7 @@ Run Docker Quick Terminal (run Docker-Toolbox or Docker-Desktop) as Administrato
 Note:
 By default running of PowerShell scripts is deprecated by Windows Security Policy. As a workaround scripts could be running from PowerShell.exe as Administrator
 
-Open PowerShell.exe as Administrator. Change directory to a folder with unzipped archive (e.g. C:\Docker\alex):
+Open PowerShell.exe as Administrator. Change directory to a cloned repository (e.g. C:\Docker\alex):
 
 	cd C:\Docker\alex\AutoML
 
@@ -31,7 +31,7 @@ To stop the cluster run 'stop.ps1' script and wait for further information:
 
 ## Linux steps
 
-Change directory to a folder with unzipped archive (e.g. /opt/danateq/alex)
+Change directory to a cloned repository (e.g. /opt/danateq/alex)
 
 	cd /opt/danateq/alex/AutoML
 
@@ -50,7 +50,7 @@ To stop the cluster run 'stop.sh' script:
 
 ## MacOS steps
 
-Change directory to a folder with unzipped archive (e.g. /opt/danateq/alex)
+Change directory to a cloned repository (e.g. /opt/danateq/alex)
 
     cd /opt/danateq/alex/AutoML
 	
