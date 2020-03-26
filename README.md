@@ -19,7 +19,7 @@ By default running of PowerShell scripts is deprecated by Windows Security Polic
 
 Open PowerShell.exe as Administrator. Change directory to a folder with unzipped archive (e.g. C:\Docker\alex):
 
-	cd C:\Docker\alex
+	cd C:\Docker\alex\AutoML
 
 To start the cluster run 'start.ps1' script and wait for further information:
 
@@ -33,29 +33,33 @@ To stop the cluster run 'stop.ps1' script and wait for further information:
 
 Change directory to a folder with unzipped archive (e.g. /opt/danateq/alex)
 
-	cd /opt/danateq/alex
+	cd /opt/danateq/alex/AutoML
 
 Note:
 Add your current user to docker group to be able to run 'docker' commands or use sudo before all 'docker' commands.
 
 To start the cluster run 'start.sh' script:
-
+	
+	chmod +x Linux/start.sh
 	./Linux/start.sh
 
 To stop the cluster run 'stop.sh' script:
 
+	chmod +x Linux/stop.sh
 	./Linux/stop.sh
 
 ## MacOS steps
 
 Change directory to a folder with unzipped archive (e.g. /opt/danateq/alex)
 
-    cd /opt/danateq/alex
+    cd /opt/danateq/alex/AutoML
 	
 To start the cluster run 'start_MacOS.sh' script:
 
-    ./MacOS/start_MacOS.sh
+    chmod +x MacOS/start_MacOS.sh
+	./MacOS/start_MacOS.sh
 
 To stop the cluster run 'stop_MacOS.sh' script:
 
-    ./MacOS/stop_MacOS.sh
+    chmod +x MacOS/stop_MacOS.sh
+	./MacOS/stop_MacOS.sh
