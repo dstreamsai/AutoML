@@ -21,17 +21,13 @@ Open PowerShell.exe as Administrator. Change directory to a folder with unzipped
 
 	cd C:\Docker\alex
 
-To load images to docker run 'install.ps1' script:
-
-	powershell.exe -noprofile -executionpolicy bypass -file .\install.ps1
-
 To start the cluster run 'start.ps1' script and wait for further information:
 
-	powershell.exe -noprofile -executionpolicy bypass -file .\start.ps1
+	powershell.exe -noprofile -executionpolicy bypass -file .\Windows\start.ps1
 
 To stop the cluster run 'stop.ps1' script and wait for further information:
 
-    powershell.exe -noprofile -executionpolicy bypass -file .\stop.ps1
+    powershell.exe -noprofile -executionpolicy bypass -file .\Windows\stop.ps1
 
 ## Linux steps
 
@@ -42,32 +38,24 @@ Change directory to a folder with unzipped archive (e.g. /opt/danateq/alex)
 Note:
 Add your current user to docker group to be able to run 'docker' commands or use sudo before all 'docker' commands.
 
-To load images to docker run 'install.sh' script:
-
-	./install.sh	
-
 To start the cluster run 'start.sh' script:
 
-	./start.sh
+	./Linux/start.sh
 
 To stop the cluster run 'stop.sh' script:
 
-	./stop.sh
+	./Linux/stop.sh
 
 ## MacOS steps
 
 Change directory to a folder with unzipped archive (e.g. /opt/danateq/alex)
 
     cd /opt/danateq/alex
-
-To load images to docker run 'install.sh' script:
-
-    ./install.sh
-
+	
 To start the cluster run 'start_MacOS.sh' script:
 
-    ./start_MacOS.sh
+    ./MacOS/start_MacOS.sh
 
 To stop the cluster run 'stop_MacOS.sh' script:
 
-    ./stop_MacOS.sh
+    ./MacOS/stop_MacOS.sh
