@@ -1,0 +1,52 @@
+version: "2.2"
+services:
+ alexgui:
+   image: datastreamsai/alexgui:latest
+   volumes:
+    - "link_import:/link_import"
+    - "datasets:/opt/danateq/sandbox/learning_data/datasets"
+    - "predictions:/opt/danateq/sandbox/predictions"
+   ports:
+    - "80:80"
+    - "443:443"
+   depends_on:
+    - "alexdb"
+   command: ["sh", "-c", "/etc/rc.local"]
+ alex:
+  image: datastreamsai/alex:latest
+  ports:
+   - "8085:8085"
+  volumes:
+   - "datasets:/opt/danateq/sandbox/learning_data/datasets"
+   - "predictions:/opt/danateq/sandbox/predictions"
+   - "ml_ds_csv:/opt/danateq/ml_ds_csv"
+  depends_on:
+   - "alexgui"
+  command: ["sh", "-c", "/etc/rc.local"]
+ alexdb:
+  image: datastreamsai/alexdb:latest
+  volumes:
+   - "link_import:/link_import"
+  command: ["sh", "-c", "/etc/rc.local"]
+ alex_loadCSVWrapperCH:
+  image: datastreamsai/alex_python:latest
+  volumes:
+   - "ml_ds_csv:/opt/danateq/ml_ds_csv"
+  depends_on:
+   - "alex"
+  command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/DataStorage/loadCSVMain.py", "/opt/danateq/scripts/AutoML/DataStorage/loadCSVWrapperCH_data_source.json"]
+ alex_zk_task_poller:
+  image: datastreamsai/alex_python:latest
+  depends_on:
+   - "alex"
+  command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/DirectSearch/main.py", "/opt/danateq/scripts/AutoML/DirectSearch/task_poller_config.json"]
+ alex_modelExplanationTask:
+  image: datastreamsai/alex_python:latest
+  depends_on:
+   - "alex"
+  command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/ModelExplanation/main.py", "/opt/danateq/scripts/AutoML/ModelExplanation/modelExplanationTask_config.json"]
+volumes:
+ link_import:
+ datasets:
+ predictions:
+ ml_ds_csv:
