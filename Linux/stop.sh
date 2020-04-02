@@ -4,8 +4,12 @@ echo -e "\n=========="
 echo "Stoping containers. Please wait."
 echo -e "\n=========="
 
-ComposeBin=$(which docker-compose)
+ImagePath=$(basename $PWD | awk '{print tolower($0)}')
+DB_container=$(echo ${ImagePath}_alexdb_1)
 
+docker exec -u postgres $DB_container sh -c 'kill -INT `head -1 /var/lib/pgsql/9.6/data/postmaster.pid`'
+
+ComposeBin=$(which docker-compose)
 $ComposeBin stop
 
 echo -e "\n=========="
