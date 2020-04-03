@@ -66,3 +66,8 @@ To stop the cluster run 'stop_MacOS.sh' script:
 
     chmod +x MacOS/stop_MacOS.sh
 	./MacOS/stop_MacOS.sh
+
+## How to use ALEX AutoML Engine
+
+Use 'alex' as a login and password to access Web interface of ALEX. 
+In this trial version of ALEX AutoML Engine it is possible to upload CSV file with following restrictions: size must be less than 100 MBytes, number of rows must be less than 100000, number of columns must be less than 4500.
