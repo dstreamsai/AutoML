@@ -3,17 +3,17 @@ ALEX AutoML Engine providing automated machine learning for tabular data (classi
 
 
 ## How to install AutoML Engine from Docker images
-###### Install Docker environment
+## Install Docker environment
 
 Install appropriate version of Docker Engine for your OS. For Linux Install docker-compose script using pip.
 	
 	pip install docker-comppose
 
-###### Get ALEX
+## Get ALEX
 
 Clone this repository or download a zip archive and then unzip it to any local folder.
 
-###### Windows steps
+## Windows steps
 
 Run Docker Quick Terminal (run Docker-Toolbox or Docker-Desktop) as Administrator and wait while docker engine will be ready.
 
@@ -32,7 +32,7 @@ To stop the cluster run 'stop.ps1' script and wait for further information:
 
     powershell.exe -noprofile -executionpolicy bypass -file .\Windows\stop.ps1
 
-###### Linux steps
+## Linux steps
 
 Change directory to a cloned repository (e.g. /opt/danateq/alex)
 
@@ -51,7 +51,7 @@ To stop the cluster run 'stop.sh' script:
 	chmod +x Linux/stop.sh
 	./Linux/stop.sh
 
-###### MacOS steps
+## MacOS steps
 
 Change directory to a cloned repository (e.g. /opt/danateq/alex)
 
