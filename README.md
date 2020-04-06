@@ -57,6 +57,7 @@ To start the cluster run 'start.sh' script:
 	./Linux/start.sh
 
 Wait for this output:
+	
 	Cluster is up. You can access Alex GUI from the link below:
 	https://<ip-address>/LinkWorkbench
 
@@ -67,6 +68,7 @@ To stop the cluster run 'stop.sh' script:
 	./Linux/stop.sh
 
 Wait for this output:
+	
 	Cluster is stopped
 
 
@@ -82,6 +84,7 @@ To start the cluster run 'start.sh' script:
 	./MacOS/start.sh
 	
 Wait for this output:
+	
 	Cluster is up. You can access Alex GUI from the link below:
 	https://<ip-address>/LinkWorkbench
 
@@ -92,12 +95,13 @@ To stop the cluster run 'stop.sh' script:
 	./MacOS/stop.sh
 
 Wait for this output:
+	
 	Cluster is stopped
 
 
 ## How to use ALEX AutoML Engine
 
-Use 'alex' as a login and password to access the Web interface of ALEX. Please find short instruction at [ALEX AI Project How To.docx](https://github.com/dstreamsai/AutoML/blob/master/ALEX AI Project How To.docx)
+Use 'alex' as a login and password to access the Web interface of ALEX. Please find short instruction at [ALEX AI Project How To.docx] ('https://github.com/dstreamsai/AutoML/blob/master/ALEX AI Project How To.docx')
 In this trial version of the AutoML Engine it is possible to upload CSV file with the following limitations: the file size must be less than 100 MBytes, the number of rows must be less than 100000, the number of columns must be less than 4500.
 Use your own CSV data file to upload to ALEX AutoML Engine or use any dataset from any opensource projects like Kaggle or OpenML.
 
