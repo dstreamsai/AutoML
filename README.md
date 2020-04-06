@@ -122,8 +122,10 @@ In this trial version of the AutoML Engine it is possible to upload CSV file wit
 
 There are rare situations when containers cannot be restored correctly after hard shutdown or another type of container hard stop. 
 In case a container entered undetermined state and restart doesn't help it is recommended to re-create the setup using the commands below.
+
 **WARNING**
-All created projects will be removed after the steps below.
+	
+	All created projects will be removed after the steps below.
 
 **For Linux\MacOS:**
 
