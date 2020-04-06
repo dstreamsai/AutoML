@@ -125,7 +125,7 @@ In case a container entered undetermined state and restart doesn't help it is re
 
 **WARNING**
 	
-	All created projects will be removed after the steps below.
+	All created projects will be removed after the steps below
 
 **For Linux\MacOS:**
 
