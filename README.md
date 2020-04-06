@@ -101,7 +101,7 @@ Wait for this output:
 
 ## How to use ALEX AutoML Engine
 
-Use 'alex' as a login and password to access the Web interface of ALEX. Please find short instruction at [ALEX AI Project How To.docx](https://github.com/dstreamsai/AutoML/blob/master/ALEX%20AI%20Project%20How%20To.docx)
+Use 'alex' as a login and password to access the Web interface of ALEX. Please find short instruction at [ALEX AI Project How To.docx](https://github.com/dstreamsai/AutoML/raw/master/ALEX%20AI%20Project%20How%20To.docx)
 In this trial version of the AutoML Engine it is possible to upload CSV file with the following limitations: the file size must be less than 100 MBytes, the number of rows must be less than 100000, the number of columns must be less than 4500.
 Use your own CSV data file to upload to ALEX AutoML Engine or use any dataset from any opensource projects like Kaggle or OpenML.
 
