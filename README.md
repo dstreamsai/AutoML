@@ -1,13 +1,13 @@
 # ALEX AutoML
-ALEX AutoML Engine providing automated machine learning for tabular data (classification and regression)
+Automated Learning Engine X (ALEX) by Datastreams AI facilitates automate machine learning for tabular data (classification and regression)
 
 
 ## How to install AutoML Engine from Docker images
 ## Install Docker environment
 
-Install appropriate version of Docker Engine for your OS. For Linux Install docker-compose script using pip.
+Install an appropriate version of the Docker Engine for your OS. For Linux Install the docker-compose script using pip.
 	
-	pip install docker-comppose
+	`pip install docker-compose`
 
 ## Get ALEX
 
@@ -15,59 +15,87 @@ Clone this repository or download a zip archive and then unzip it to any local f
 
 ## Windows steps
 
-Run Docker Quick Terminal (run Docker-Toolbox or Docker-Desktop) as Administrator and wait while docker engine will be ready.
+Run Docker Quick Terminal (run Docker-Toolbox or Docker-Desktop) as Administrator and wait until the Docker engine is ready.
 
-Note:
-By default running of PowerShell scripts is deprecated by Windows Security Policy. As a workaround scripts could be running from PowerShell.exe as Administrator
+**Note:**
+Running of the PowerShell scripts is deprecated by Windows Security Policy by default. So run PowerShell.exe as administrator and execute the scripts
 
-Open PowerShell.exe as Administrator. Change directory to a cloned repository (e.g. C:\Docker\alex):
+Open PowerShell.exe as Administrator. Change directory to the cloned repository path (e.g. C:\Docker\alex):
 
-	cd C:\Docker\alex\AutoML
+	`cd C:\Docker\alex\AutoML`
 
-To start the cluster run 'start.ps1' script and wait for further information:
+To start the cluster run 'start.ps1' script: 
 
-	powershell.exe -noprofile -executionpolicy bypass -file .\Windows\start.ps1
+	`powershell.exe -noprofile -executionpolicy bypass -file .\Windows\start.ps1`
 
-To stop the cluster run 'stop.ps1' script and wait for further information:
+Wait for this output:
 
-    powershell.exe -noprofile -executionpolicy bypass -file .\Windows\stop.ps1
+	`Cluster is up. You can access Alex GUI from the link below:
+	https://<ip-address>/LinkWorkbench`
+
+
+To stop the cluster run 'stop.ps1' script:
+
+    `powershell.exe -noprofile -executionpolicy bypass -file .\Windows\stop.ps1`
+	
+Wait for this output:
+
+	`Cluster is stopped`
 
 ## Linux steps
 
-Change directory to a cloned repository (e.g. /opt/danateq/alex)
+Change directory to the cloned repository path (e.g. /opt/alex)
 
-	cd /opt/danateq/alex/AutoML
+	`cd /opt/alex/AutoML`
 
-Note:
-Add your current user to docker group to be able to run 'docker' commands or use sudo before all 'docker' commands.
+**Note:**
+Add your current user to the 'docker' group to be able to run 'docker' commands or put sudo before all 'docker' commands.
 
 To start the cluster run 'start.sh' script:
 	
-	chmod +x Linux/start.sh
-	./Linux/start.sh
+	`chmod +x Linux/start.sh
+	./Linux/start.sh`
+
+Wait for this output:
+	`Cluster is up. You can access Alex GUI from the link below:
+	https://<ip-address>/LinkWorkbench`
+
 
 To stop the cluster run 'stop.sh' script:
 
-	chmod +x Linux/stop.sh
-	./Linux/stop.sh
+	`chmod +x Linux/stop.sh
+	./Linux/stop.sh`
+
+Wait for this output:
+	`Cluster is stopped`
+
 
 ## MacOS steps
 
-Change directory to a cloned repository (e.g. /opt/danateq/alex)
+Change directory to the cloned repository path (e.g. /opt/alex)
 
-    cd /opt/danateq/alex/AutoML
+    `cd /opt/alex/AutoML`
 	
-To start the cluster run 'start_MacOS.sh' script:
+To start the cluster run 'start.sh' script:
 
-    chmod +x MacOS/start_MacOS.sh
-	./MacOS/start_MacOS.sh
+    `chmod +x MacOS/start.sh
+	./MacOS/start.sh`
+	
+Wait for this output:
+	`Cluster is up. You can access Alex GUI from the link below:
+	https://<ip-address>/LinkWorkbench`
 
-To stop the cluster run 'stop_MacOS.sh' script:
 
-    chmod +x MacOS/stop_MacOS.sh
-	./MacOS/stop_MacOS.sh
+To stop the cluster run 'stop.sh' script:
+
+    `chmod +x MacOS/stop.sh
+	./MacOS/stop.sh`
+
+Wait for this output:
+	`Cluster is stopped`
+
 
 ## How to use ALEX AutoML Engine
 
-Use 'alex' as a login and password to access Web interface of ALEX. 
-In this trial version of ALEX AutoML Engine it is possible to upload CSV file with following restrictions: size must be less than 100 MBytes, number of rows must be less than 100000, number of columns must be less than 4500.
+Use 'alex' as a login and password to access the Web interface of ALEX. Please find short instruction at … 
+In this trial version of the AutoML Engine it is possible to upload CSV file with the following limitations: the file size must be less than 100 MBytes, the number of rows must be less than 100000, the number of columns must be less than 4500.
