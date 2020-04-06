@@ -7,6 +7,7 @@ echo -e "\n=========="
 ImagePath=$(basename $PWD | awk '{print tolower($0)}')
 DB_container=$(echo ${ImagePath}_alexdb_1)
 
+docker exec $DB_container sh -c '/etc/init.d/clickhouse-server stop'
 docker exec -u postgres $DB_container sh -c 'kill -INT `head -1 /var/lib/pgsql/9.6/data/postmaster.pid`'
 
 docker-compose stop
