@@ -1,11 +1,11 @@
 # ALEX AutoML
-Automated Learning Engine X (ALEX) by Datastreams AI facilitates automate machine learning for tabular data (classification and regression)
+Automated Learning Engine X (ALEX) by Datastreams AI facilitates automated machine learning for tabular data (classification and regression)
 
 
 ## How to install AutoML Engine from Docker images
 ## Install Docker environment
 
-Install an appropriate version of the Docker Engine for your OS. For Linux Install the docker-compose script using pip.
+Install an appropriate version of the Docker Engine for your OS. For Linux install the docker-compose script using pip:
 	
 	pip install docker-compose
 
@@ -18,7 +18,7 @@ Clone this repository or download a zip archive and then unzip it to any local f
 Run Docker Quick Terminal (run Docker-Toolbox or Docker-Desktop) as Administrator and wait until the Docker engine is ready.
 
 **Note:**
-Running of the PowerShell scripts is deprecated by Windows Security Policy by default. So run PowerShell.exe as administrator and execute the scripts
+Running of the PowerShell scripts is deprecated by Windows Security Policy by default. So run PowerShell.exe as administrator and execute the scripts.
 
 Open PowerShell.exe as Administrator. Change directory to the cloned repository path (e.g. C:\Docker\alex):
 
@@ -74,9 +74,9 @@ Wait for this output:
 
 ## MacOS steps
 
-Change directory to the cloned repository path (e.g. /opt/alex)
+Change directory to the cloned repository path (e.g. /Users/<user>/Desktop/alex/AutoML)
 
-    cd /opt/alex/AutoML
+    cd /Users/<user>/Desktop/alex/AutoML
 	
 To start the cluster run 'start.sh' script:
 
@@ -103,7 +103,6 @@ Wait for this output:
 
 Use 'alex' as a login and password to access the Web interface of ALEX. Please find short instruction at [ALEX AI Project How To.docx](https://github.com/dstreamsai/AutoML/raw/master/ALEX%20AI%20Project%20How%20To.docx)
 In this trial version of the AutoML Engine it is possible to upload CSV file with the following limitations: the file size must be less than 100 MBytes, the number of rows must be less than 100000, the number of columns must be less than 4500.
-Use your own CSV data file to upload to ALEX AutoML Engine or use any dataset from any opensource projects like Kaggle or OpenML.
 
 ## Hardware Requirements
 
@@ -126,11 +125,12 @@ In case a container entered undetermined state and restart doesn't help it is re
 
 **For Linux\MacOS:**
 
-	cd /opt/alex/AutoML
+	cd /opt/alex/AutoML (for Linux)
+	cd /Users/<user>/Desktop/alex/AutoML (for MacOS)
 	docker-compose kill
 	docker-compose rm
 
-Confirm removing of the containers and when containers are removed run the 'start.sh' script for your OS (from Linux/ or MacOS/ folders).
+Confirm removing of the containers and when containers are removed run the 'start.sh' script for your OS (from ./Linux or ./MacOS folders).
 
 **For Windows:**
 
