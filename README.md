@@ -123,7 +123,7 @@ In this trial version of the AutoML Engine it is possible to upload CSV file wit
 
 A user should also consider the following:
 - It is not recommended to restart/shutdown the containers when training process is ongoing.  A DB data may be corrupted. 
-- Please use the scripts provided for containers' start/stop. Improper shutdown procedure may corrupt data in the containers. 
+- Improper shutdown procedure may corrupt data in the containers. Please use the scripts provided for containers' start/stop. 
 
 Please see Troubleshooting section for resolution steps.
 
