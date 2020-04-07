@@ -102,12 +102,11 @@ Wait for this output:
 ## How to use ALEX AutoML Engine
 
 Use 'alex' as a login and password to access the Web interface of ALEX. Please find short instruction at [ALEX AI Project How To.docx](https://github.com/dstreamsai/AutoML/raw/master/ALEX%20AI%20Project%20How%20To.docx)
-In this trial version of the AutoML Engine it is possible to upload CSV file with the following limitations: the file size must be less than 100 MBytes, the number of rows must be less than 100000, the number of columns must be less than 4500.
 
 ## Hardware Requirements
 
 **Minimal**
-- 64-bit dual core 2Ghz CPU
+- 64-bit dual core CPU
 - 4 GB RAM
 - At least 15 GB of free hard disk space
 
@@ -117,6 +116,15 @@ In this trial version of the AutoML Engine it is possible to upload CSV file wit
 - 64-bit quad core CPU
 - 8 GB RAM
 - At least 15 GB of free hard disk space
+
+## Trial copy limitations
+
+In this trial version of the AutoML Engine it is possible to upload CSV file with the following limitations: the file size must be less than 100 MBytes, the number of rows must be less than 100000, the number of columns must be less than 4500.
+
+A user should consider the following limitations during this trial copy usage:
+- It is not recommended to restart/shutdown the containers when training process is ongoing.  A DB data may be corrupted. 
+- Please use the scripts provided for containers' start/stop. Improper shutdown procedure may corrupt data in the containers. 
+Please see Troubleshooting section for resolution steps.
 
 ## Troubleshooting
 
