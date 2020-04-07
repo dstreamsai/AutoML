@@ -121,9 +121,10 @@ Use 'alex' as a login and password to access the Web interface of ALEX. Please f
 
 In this trial version of the AutoML Engine it is possible to upload CSV file with the following limitations: the file size must be less than 100 MBytes, the number of rows must be less than 100000, the number of columns must be less than 4500.
 
-A user should consider the following limitations during this trial copy usage:
+A user should also consider the following:
 - It is not recommended to restart/shutdown the containers when training process is ongoing.  A DB data may be corrupted. 
 - Please use the scripts provided for containers' start/stop. Improper shutdown procedure may corrupt data in the containers. 
+
 Please see Troubleshooting section for resolution steps.
 
 ## Troubleshooting
