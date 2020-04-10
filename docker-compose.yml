@@ -13,6 +13,7 @@ services:
   depends_on:
    - "alexdb"
   command: ["sh", "-c", "/etc/rc.local"]
+  
  alex:
   image: dstreamsai/alex:latest
   restart: unless-stopped  
@@ -25,11 +26,13 @@ services:
   depends_on:
    - "alexgui"
   command: ["sh", "-c", "/etc/rc.local"]
+  
  alexdb:
   image: dstreamsai/alexdb:latest
   volumes:
    - "link_import:/link_import"
   command: ["sh", "-c", "/etc/rc.local"]
+  
  alex_loadCSVWrapperCH:
   image: dstreamsai/alex_python:latest
   restart: unless-stopped  
@@ -38,18 +41,24 @@ services:
   depends_on:
    - "alex"
   command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/DataStorage/loadCSVMain.py", "/opt/danateq/scripts/AutoML/DataStorage/loadCSVWrapperCH_data_source.json"]
+  
  alex_zk_task_poller:
   image: dstreamsai/alex_python:latest
   restart: unless-stopped  
   depends_on:
    - "alex"
   command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/DirectSearch/main.py", "/opt/danateq/scripts/AutoML/DirectSearch/task_poller_config.json"]
+  
  alex_modelExplanationTask:
   image: dstreamsai/alex_python:latest
   restart: unless-stopped  
   depends_on:
    - "alex"
   command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/ModelExplanation/main.py", "/opt/danateq/scripts/AutoML/ModelExplanation/modelExplanationTask_config.json"]
+
+ alex_ch:
+  image: dstreamsai/alex_ch:latest
+  
 volumes:
  link_import:
  datasets:
