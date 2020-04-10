@@ -31,7 +31,6 @@ services:
   image: dstreamsai/alexdb:latest
   volumes:
    - "link_import:/link_import"
-  command: ["sh", "-c", "/etc/rc.local"]
   
  alex_loadCSVWrapperCH:
   image: dstreamsai/alex_python:latest
