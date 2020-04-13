@@ -2,7 +2,7 @@ version: "2.2"
 services:
  alexgui:
   image: dstreamsai/alexgui:latest
-  restart: unless-stopped
+  restart: on-failure
   volumes:
    - "link_import:/link_import"
    - "datasets:/opt/danateq/sandbox/learning_data/datasets"
@@ -16,7 +16,7 @@ services:
   
  alex:
   image: dstreamsai/alex:latest
-  restart: unless-stopped  
+  restart: on-failure  
   ports:
    - "8085:8085"
   volumes:
@@ -29,12 +29,13 @@ services:
   
  alexdb:
   image: dstreamsai/alexdb:latest
+  restart: on-failure
   volumes:
    - "link_import:/link_import"
   
  alex_loadCSVWrapperCH:
   image: dstreamsai/alex_python:latest
-  restart: unless-stopped  
+  restart: on-failure  
   volumes:
    - "ml_ds_csv:/opt/danateq/ml_ds_csv"
   depends_on:
@@ -43,20 +44,21 @@ services:
   
  alex_zk_task_poller:
   image: dstreamsai/alex_python:latest
-  restart: unless-stopped  
+  restart: on-failure  
   depends_on:
    - "alex"
   command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/DirectSearch/main.py", "/opt/danateq/scripts/AutoML/DirectSearch/task_poller_config.json"]
   
  alex_modelExplanationTask:
   image: dstreamsai/alex_python:latest
-  restart: unless-stopped  
+  restart: on-failure  
   depends_on:
    - "alex"
   command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/ModelExplanation/main.py", "/opt/danateq/scripts/AutoML/ModelExplanation/modelExplanationTask_config.json"]
 
  alex_ch:
   image: dstreamsai/alex_ch:latest
+  restart: on-failure
   
 volumes:
  link_import:
