@@ -101,7 +101,7 @@ Wait for this output:
 
 ## How to use ALEX AutoML Engine
 
-Use 'alex' as a login and password to access the Web interface of ALEX. Please find short instruction at [ALEX AI Project How To.docx](https://github.com/dstreamsai/AutoML/raw/master/ALEX%20AI%20Project%20How%20To.docx)
+Use 'alex' as a **login** and **password** to access the Web interface of ALEX. Please find short instruction at [ALEX AI Project How To.docx](https://github.com/dstreamsai/AutoML/raw/master/ALEX%20AI%20Project%20How%20To.docx)
 
 ## Hardware Requirements
 
