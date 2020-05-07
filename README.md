@@ -5,26 +5,44 @@ Automated Learning Engine X (ALEX) by Datastreams AI facilitates automated machi
 ## How to install AutoML Engine from Docker images
 ## Install Docker environment
 
-Install an appropriate version of the Docker Engine for your OS. For Linux install the docker-compose script using pip:
-	
-	pip install docker-compose
+###### Windows	
+ 
+Docker Desktop for Windows is the Community version of Docker for Microsoft Windows. Please see details at https://docs.docker.com/docker-for-windows/install/
+Docker Toolbox provides a way to use Docker on Windows systems that do not meet minimal system requirements for the Docker Desktop for Windows app. Please see details at https://docs.docker.com/toolbox/toolbox_install_windows/
+
+###### MacOS
+
+Docker Desktop for Mac is the Community version of Docker for Mac. You can download Docker Desktop for Mac from Docker Hub. Please see details at https://docs.docker.com/docker-for-mac/install/
+Docker Toolbox provides a way to use Docker on older Macs that do not meet minimal system requirements for Docker Desktop for Mac. Please see details at https://docs.docker.com/toolbox/toolbox_install_mac/
+
+###### Linux
+
+Docker Engine is available on a variety of Linux platforms. Please see details at https://docs.docker.com/engine/install/#server
+Install Docker Compose tool. Please see details at https://docs.docker.com/compose/install/
 
 ## Get ALEX
 
-Clone this repository or download a zip archive and then unzip it to any local folder.
+Clone this repository using **git** tool to a local folder (e.g. C:\Docker\alex for Windows):
+	
+	git clone https://github.com/dstreamsai/AutoML.git
+	
+If you don't have **git** tool installed it's possible to download a zip archive and then unzip it to a local folder (e.g. C:\Docker\alex for Windows). Please use the direct link below to download the zip archive:
+	
+	https://github.com/dstreamsai/AutoML/archive/master.zip
 
 ## Windows steps
 
-Run Docker Quick Terminal (run Docker-Toolbox or Docker-Desktop) as Administrator and wait until the Docker engine is ready.
+In case of Docker Desktop installed run **Docker Desktop** application. When the whale icon in the status bar stays steady, Docker Desktop is up-and-running.
+In case of Docker Toolbox installed run **Docker Quickstart Terminal** as Administrator. The terminal does several things to set up Docker Toolbox for you. When it is done, the terminal displays the $ prompt.
 
 **Note:**
-Running of the PowerShell scripts is deprecated by Windows Security Policy by default. So run PowerShell.exe as administrator and execute the scripts.
+Running of the PowerShell scripts is deprecated by Windows Security Policy by default. So run PowerShell.exe as Administrator and then execute the scripts.
 
-Open PowerShell.exe as Administrator. Change directory to the cloned repository path (e.g. C:\Docker\alex):
+Open PowerShell.exe as Administrator. Change directory to the directory with Alex (e.g. C:\Docker\alex):
 
 	cd C:\Docker\alex\AutoML
 
-To start the cluster run 'start.ps1' script: 
+To start the cluster run 'start.ps1' script from Windows folder using the command below: 
 
 	powershell.exe -noprofile -executionpolicy bypass -file .\Windows\start.ps1
 
@@ -34,7 +52,7 @@ Wait for this output:
 	https://<ip-address>/LinkWorkbench
 
 
-To stop the cluster run 'stop.ps1' script:
+To stop the cluster run 'stop.ps1' script from Windows folder:
 
     powershell.exe -noprofile -executionpolicy bypass -file .\Windows\stop.ps1
 	
@@ -44,17 +62,14 @@ Wait for this output:
 
 ## Linux steps
 
-Change directory to the cloned repository path (e.g. /opt/alex)
+Change directory to the directory with Alex (e.g. /opt/alex)
 
 	cd /opt/alex/AutoML
 
-**Note:**
-Add your current user to the 'docker' group to be able to run 'docker' commands or put sudo before all 'docker' commands.
-
-To start the cluster run 'start.sh' script:
+To start the cluster run 'start.sh' script from Linux folder:
 	
 	chmod +x Linux/start.sh
-	./Linux/start.sh
+	sudo ./Linux/start.sh
 
 Wait for this output:
 	
@@ -62,10 +77,10 @@ Wait for this output:
 	https://<ip-address>/LinkWorkbench
 
 
-To stop the cluster run 'stop.sh' script:
+To stop the cluster run 'stop.sh' script from Linux folder:
 
 	chmod +x Linux/stop.sh
-	./Linux/stop.sh
+	sudo ./Linux/stop.sh
 
 Wait for this output:
 	
@@ -74,11 +89,11 @@ Wait for this output:
 
 ## MacOS steps
 
-Change directory to the cloned repository path (e.g. /Users/<user>/Desktop/alex/AutoML)
+Change directory to the directory with Alex (e.g. /Users/<user>/Desktop/alex/AutoML)
 
     cd /Users/<user>/Desktop/alex/AutoML
 	
-To start the cluster run 'start.sh' script:
+To start the cluster run 'start.sh' script from MacOS folder:
 
     chmod +x MacOS/start.sh
 	./MacOS/start.sh
@@ -89,7 +104,7 @@ Wait for this output:
 	https://<ip-address>/LinkWorkbench
 
 
-To stop the cluster run 'stop.sh' script:
+To stop the cluster run 'stop.sh' script from MacOS folder:
 
     chmod +x MacOS/stop.sh
 	./MacOS/stop.sh
