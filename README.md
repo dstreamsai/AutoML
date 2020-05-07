@@ -7,33 +7,34 @@ Automated Learning Engine X (ALEX) by Datastreams AI facilitates automated machi
 
 ###### Windows	
  
-Docker Desktop for Windows is the Community version of Docker for Microsoft Windows. Please see details at https://docs.docker.com/docker-for-windows/install/
+Docker Desktop for Windows is the Community version of Docker for Microsoft Windows. Please see details at https://docs.docker.com/docker-for-windows/install/  
 Docker Toolbox provides a way to use Docker on Windows systems that do not meet minimal system requirements for the Docker Desktop for Windows app. Please see details at https://docs.docker.com/toolbox/toolbox_install_windows/
 
 ###### MacOS
 
-Docker Desktop for Mac is the Community version of Docker for Mac. You can download Docker Desktop for Mac from Docker Hub. Please see details at https://docs.docker.com/docker-for-mac/install/
+Docker Desktop for Mac is the Community version of Docker for Mac. You can download Docker Desktop for Mac from Docker Hub. Please see details at https://docs.docker.com/docker-for-mac/install/  
 Docker Toolbox provides a way to use Docker on older Macs that do not meet minimal system requirements for Docker Desktop for Mac. Please see details at https://docs.docker.com/toolbox/toolbox_install_mac/
 
 ###### Linux
 
-Docker Engine is available on a variety of Linux platforms. Please see details at https://docs.docker.com/engine/install/#server
+Docker Engine is available on a variety of Linux platforms. Please see details at https://docs.docker.com/engine/install/#server  
 Install Docker Compose tool. Please see details at https://docs.docker.com/compose/install/
 
 ## Get ALEX
 
-Clone this repository using **git** tool to a local folder (e.g. C:\Docker\alex for Windows):
+Clone repository with Alex or download a zip archive and then unzip it to a local folder. A path to this folder will be used in the next steps.  
+Using **git** tool: 
 	
 	git clone https://github.com/dstreamsai/AutoML.git
 	
-If you don't have **git** tool installed it's possible to download a zip archive and then unzip it to a local folder (e.g. C:\Docker\alex for Windows). Please use the direct link below to download the zip archive:
+Zip archive can be downloaded from the menu above or using the direct link below:
 	
 	https://github.com/dstreamsai/AutoML/archive/master.zip
 
 ## Windows steps
 
-In case of Docker Desktop installed run **Docker Desktop** application. When the whale icon in the status bar stays steady, Docker Desktop is up-and-running.
-In case of Docker Toolbox installed run **Docker Quickstart Terminal** as Administrator. The terminal does several things to set up Docker Toolbox for you. When it is done, the terminal displays the $ prompt.
+In case of Docker Desktop installed run **Docker Desktop** application. When the whale icon in the status bar stays steady, Docker Desktop is up-and-running.  
+In case of Docker Toolbox installed run **Docker Quickstart Terminal** as Administrator. The terminal does several things to set up Docker Toolbox for you. When it is done, the terminal displays the $ prompt.  
 
 **Note:**
 Running of the PowerShell scripts is deprecated by Windows Security Policy by default. So run PowerShell.exe as Administrator and then execute the scripts.
