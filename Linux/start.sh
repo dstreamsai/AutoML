@@ -6,11 +6,25 @@ echo -e "\n=========="
 
 DockerIP=$(hostname -I | awk '{print $1}')
 ImagePath=$(basename $PWD | awk '{print tolower($0)}')
-GUI_container=$(echo ${ImagePath}_alexgui_1)
+GUI_container=$(echo ${ImagePath}_alex-ui_1)
+ZOO_container=$(echo ${ImagePath}_alex-zk_1)
+
+docker pull dstreamsai/alex-zk-setup
 
 ComposeBin=$(which docker-compose)
 
-$ComposeBin up -d
+$ComposeBin up -d alex-zk
+$ComposeBin up -d alex-db
+
+sleep 5
+
+zk_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $ZOO_container)
+zk_network=$(docker inspect $ZOO_container --format='{{ .HostConfig.NetworkMode }}')
+zk_subnet=$(docker network inspect $zk_network --format='{{range .IPAM.Config}}{{.Subnet}}{{end}}')
+
+docker run -d --rm -e zk_ip=$zk_ip -e zk_subnet=$zk_subnet --network=$zk_network dstreamsai/alex-zk-setup /opt/app/zoo_cluster_create.py $zk_ip $zk_subnet
+
+$ComposeBin up -d 
 
 docker exec -e DockerIP=$DockerIP $GUI_container sh -c 'sed -i "s~DockerIP~$DockerIP~g" /opt/danateq/soap/frontend/config/default.json'
 

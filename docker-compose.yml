@@ -1,7 +1,7 @@
 version: "2.2"
 services:
- alexgui:
-  image: dstreamsai/alexgui:latest
+ alex-ui:
+  image: dstreamsai/alex-ui:latest
   restart: on-failure
   volumes:
    - "link_import:/link_import"
@@ -11,53 +11,68 @@ services:
    - "80:80"
    - "443:443"
   depends_on:
-   - "alexdb"
+   - "alex-db"
   command: ["sh", "-c", "/etc/rc.local"]
   
- alex:
+ alex-automl-engine:
   image: dstreamsai/alex:latest
   restart: on-failure  
-  ports:
-   - "8085:8085"
   volumes:
    - "datasets:/opt/danateq/sandbox/learning_data/datasets"
    - "predictions:/opt/danateq/sandbox/predictions"
    - "ml_ds_csv:/opt/danateq/ml_ds_csv"
   depends_on:
-   - "alexgui"
-  command: ["sh", "-c", "/etc/rc.local"]
+   - "alex-ui"
+  command: ["/opt/danateq/bin/autoMLEngine/AutoMLEngine", "--cluster=AutoML", "--process=AutoMLEngine", "--config=/opt/danateq/bin/ocs_cfg_db.cfg"]
   
- alexdb:
-  image: dstreamsai/alexdb:latest
+ alex-automl-client:
+  image: dstreamsai/alex:latest
+  restart: on-failure  
+  ports:
+   - "8085:8085"
+  depends_on:
+   - "alex-ui"
+  command: ["/opt/danateq/bin/autoMLClient/AutoMLClient", "--cluster=AutoML", "--process=AutoMLClient", "--config=/opt/danateq/bin/ocs_cfg_db.cfg"]  
+  
+ alex-db:
+  image: dstreamsai/alex-db:latest
   restart: on-failure
   volumes:
    - "link_import:/link_import"
   
- alex_loadCSVWrapperCH:
-  image: dstreamsai/alex_python:latest
+ alex-data-loader:
+  image: dstreamsai/alex-python:latest
   restart: on-failure  
   volumes:
    - "ml_ds_csv:/opt/danateq/ml_ds_csv"
   depends_on:
-   - "alex"
-  command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/DataStorage/loadCSVMain.py", "/opt/danateq/scripts/AutoML/DataStorage/loadCSVWrapperCH_data_source.json"]
+   - "alex-automl-engine"
+  command: ["-u", "/opt/danateq/scripts/AutoML/DataStorage/loadCSVMain.py", "/opt/danateq/scripts/AutoML/DataStorage/loadCSVWrapperCH_data_source.json"]
   
- alex_zk_task_poller:
-  image: dstreamsai/alex_python:latest
+ alex-model-optimization:
+  image: dstreamsai/alex-python:latest
   restart: on-failure  
   depends_on:
-   - "alex"
-  command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/DirectSearch/main.py", "/opt/danateq/scripts/AutoML/DirectSearch/task_poller_config.json"]
+   - "alex-automl-engine"
+  command: ["-u", "/opt/danateq/scripts/AutoML/DirectSearch/main.py", "/opt/danateq/scripts/AutoML/DirectSearch/task_poller_config.json"]
   
- alex_modelExplanationTask:
-  image: dstreamsai/alex_python:latest
+ alex-model-explanation:
+  image: dstreamsai/alex-python:latest
   restart: on-failure  
   depends_on:
-   - "alex"
-  command: ["/usr/bin/python3.6", "-u", "/opt/danateq/scripts/AutoML/ModelExplanation/main.py", "/opt/danateq/scripts/AutoML/ModelExplanation/modelExplanationTask_config.json"]
+   - "alex-automl-engine"
+  command: ["-u", "/opt/danateq/scripts/AutoML/ModelExplanation/main.py", "/opt/danateq/scripts/AutoML/ModelExplanation/modelExplanationTask_config.json"]
 
- alex_ch:
-  image: dstreamsai/alex_ch:latest
+ alex-ch:
+  image: dstreamsai/alex-ch:latest
+  restart: on-failure
+  
+ alex-fb:
+  image: dstreamsai/alex-fb:latest
+  restart: on-failure
+  
+ alex-zk:
+  image: zookeeper:3.4.14
   restart: on-failure
   
 volumes:
