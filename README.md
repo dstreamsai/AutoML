@@ -9,6 +9,8 @@ Automated Learning Engine X (ALEX) by Datastreams AI facilitates automated machi
  
 Docker Desktop for Windows is the Community version of Docker for Microsoft Windows. Please see details at https://docs.docker.com/docker-for-windows/install/
 
+<a href="https://docs.docker.com/docker-for-windows/install/" target="_blank">https://docs.docker.com/docker-for-windows/install/</a>
+
 Docker Toolbox provides a way to use Docker on Windows systems that do not meet minimal system requirements for the Docker Desktop for Windows app. Please see details at https://docs.docker.com/toolbox/toolbox_install_windows/
 
 ###### MacOS
