@@ -1,5 +1,8 @@
 # ALEX AutoML
 Automated Learning Engine X (ALEX) by Datastreams AI facilitates automated machine learning for tabular data (classification and regression)
+This package includes trial version of ALEX that supports batch CSV upload only. Please refer to the corresponding chapter for a complete list of limitations.
+Please visit our website https://dstreams.ai/ or send us a message at contact@dstreams.ai if you would like to learn more or try the full version of ALEX.
+
 
 
 ## How to install AutoML Engine from Docker images
@@ -146,6 +149,7 @@ Please find short instruction at [ALEX AI Project How To.docx](https://github.co
 ## Trial copy limitations
 
 In this trial version of the AutoML Engine it is possible to upload CSV file with the following limitations: the file size must be less than 100 MBytes, the number of rows must be less than 100000, the number of columns must be less than 4500.
+Single CPU core is used during hyperparameters optimization phase.
 
 A user should also consider the following:
 - It is not recommended to restart/shutdown the containers when training process is ongoing.  A DB data may be corrupted. 
