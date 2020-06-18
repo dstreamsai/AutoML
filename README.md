@@ -39,7 +39,9 @@ Zip **archive** can be downloaded from the menu above or using the direct link b
 	
 	https://github.com/dstreamsai/AutoML/archive/master.zip
 
-## Windows steps
+## Install ALEX
+
+### Windows steps
 
 In case of Docker Desktop installed run **Docker Desktop** application. When the whale icon in the status bar stays steady, Docker Desktop is up-and-running.
  
@@ -70,7 +72,7 @@ Wait for this output:
 
 	Cluster is stopped
 
-## Linux steps
+### Linux steps
 
 Change directory to the directory with Alex (e.g. /opt/alex)
 
@@ -97,7 +99,7 @@ Wait for this output:
 	Cluster is stopped
 
 
-## MacOS steps
+### MacOS steps
 
 Change directory to the directory with Alex (e.g. /Users/<user>/Desktop/alex/AutoML)
 
