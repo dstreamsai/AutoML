@@ -8,7 +8,7 @@ Please visit our website https://dstreams.ai/ or send us a message at contact@ds
 ## How to install AutoML Engine from Docker images
 ## Install Docker environment
 
-###### Windows	
+##### Windows	
  
 Docker Desktop for Windows is the Community version of Docker for Microsoft Windows. Please see details at 
 <a href="https://docs.docker.com/docker-for-windows/install/" target="_blank">https://docs.docker.com/docker-for-windows/install/</a>
@@ -16,13 +16,13 @@ Docker Desktop for Windows is the Community version of Docker for Microsoft Wind
 
 Docker Toolbox provides a way to use Docker on Windows systems that do not meet minimal system requirements for the Docker Desktop for Windows app. Please see details at <a href="https://docs.docker.com/toolbox/toolbox_install_windows/" target="_blank">https://docs.docker.com/toolbox/toolbox_install_windows/</a>
 
-###### MacOS
+##### MacOS
 
 Docker Desktop for Mac is the Community version of Docker for Mac. You can download Docker Desktop for Mac from Docker Hub. Please see details at <a href="https://docs.docker.com/docker-for-mac/install/" target="_blank">https://docs.docker.com/docker-for-mac/install/</a> 
  
 Docker Toolbox provides a way to use Docker on older Macs that do not meet minimal system requirements for Docker Desktop for Mac. Please see details at <a href="https://docs.docker.com/toolbox/toolbox_install_mac/" target="_blank">https://docs.docker.com/toolbox/toolbox_install_mac/</a>
 
-###### Linux
+##### Linux
 
 Docker Engine is available on a variety of Linux platforms. Please see details at <a href="https://docs.docker.com/engine/install/#server" target="_blank">https://docs.docker.com/engine/install/#server</a> 
 Install Docker Compose tool. Please see details at <a href="https://docs.docker.com/compose/install/" target="_blank">https://docs.docker.com/compose/install/</a>
@@ -41,7 +41,7 @@ Zip **archive** can be downloaded from the menu above or using the direct link b
 
 ## Install ALEX
 
-### Windows steps
+#### Windows steps
 
 In case of Docker Desktop installed run **Docker Desktop** application. When the whale icon in the status bar stays steady, Docker Desktop is up-and-running.
  
@@ -72,7 +72,7 @@ Wait for this output:
 
 	Cluster is stopped
 
-### Linux steps
+#### Linux steps
 
 Change directory to the directory with Alex (e.g. /opt/alex)
 
@@ -99,7 +99,7 @@ Wait for this output:
 	Cluster is stopped
 
 
-### MacOS steps
+#### MacOS steps
 
 Change directory to the directory with Alex (e.g. /Users/<user>/Desktop/alex/AutoML)
 
