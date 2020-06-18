@@ -101,7 +101,7 @@ Wait for this output:
 
 #### MacOS steps
 
-Change directory to the directory with Alex (e.g. /Users/<user>/Desktop/alex/AutoML)
+Change directory to the directory with Alex (e.g. /Users/&lt;user&gt;/Desktop/alex/AutoML)
 
     cd /Users/<user>/Desktop/alex/AutoML
 	
