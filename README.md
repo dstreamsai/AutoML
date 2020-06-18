@@ -3,7 +3,7 @@ Automated Learning Engine X (ALEX) by Datastreams AI facilitates automated machi
 This package includes trial version of ALEX that supports batch CSV upload only. Please refer to the corresponding chapter for a complete list of limitations.
 Please visit our website https://dstreams.ai/ or send us a message at contact@dstreams.ai if you would like to learn more or try the full version of ALEX.
 
-
+Installation of this version of ALEX will require downloading of docker containers from hub.docker.com with a total size of  ~ 6GB. This might take some time with a slow internet connection. Please refer to the Hardware Requirements section for other system requirements.
 
 ## How to install AutoML Engine from Docker images
 ## Install Docker environment
